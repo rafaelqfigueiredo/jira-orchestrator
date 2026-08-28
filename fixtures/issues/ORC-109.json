@@ -1,0 +1,322 @@
+{
+  "id": "1109",
+  "key": "ORC-109",
+  "fields": {
+    "summary": "Hand a case over to another clinic",
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Clinics that cover for each other over the summer have been asking for this for two years and we have always told them to close the case and have the patient start again. That costs the patient the whole questionnaire a second time, it loses the history the covering doctor most needs, and three of the larger clinics have taken to sharing a login instead, which is the outcome nobody wanted. Support handled eleven of these by hand in July."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "So a doctor should be able to hand a case they hold over to another clinic, and the receiving clinic should be able to take it on with everything already on it."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "How a handover goes"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A doctor starts a handover from the case, picks the receiving clinic from the list of clinics the product knows about, and writes a short note saying why. The case stays exactly where it is and the doctor who started it keeps working on it as normal."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The receiving clinic sees the handover waiting, together with the note and who sent it, and accepts it. On acceptance the case moves: the receiving clinic holds it, its doctors can work on it, and the sending clinic's doctors can read it but no longer change it. Everything already on the case comes with it - the questionnaire, the images, the messages and the lab results."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "What the patient sees"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The patient is told once, when the case moves, in the message thread on the case they already have open. The line names the clinic that now holds it and nothing else. Nothing about the questionnaire, the images or the message thread changes, and the patient does nothing and decides nothing."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Who can do what"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Only a doctor who is a member of the clinic that currently holds the case can start a handover, and only a doctor who is a member of the receiving clinic can accept one. Nobody else sees either control. Support staff do not see them either, which is deliberate: they can read the case as they can today."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Where"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The dashboard, on the case itself for starting one, and on the clinic's own overview for the list of handovers waiting to be accepted. The patient app needs the one line in the message thread and nothing else."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Acceptance criteria"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A doctor who is a member of the clinic holding a case can start a handover from it, naming a receiving clinic and a note."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "The receiving clinic's doctors see the handover waiting, with the note and the sender, on the clinic overview."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A doctor who is a member of the receiving clinic can accept a waiting handover, and the case then belongs to that clinic."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "After acceptance the sending clinic's doctors can read the case and cannot change it."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "The questionnaire, the images, the messages and the lab results are all on the case after it moves, unchanged."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "The patient sees one line in the message thread naming the clinic that now holds the case."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A doctor who is a member of neither clinic sees no handover control anywhere."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Already decided, so that nobody has to ask"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A case can have at most one handover waiting against it at a time; a doctor who wants to send it somewhere else has to withdraw the one that is waiting first. A clinic can have any number waiting for it and they are listed oldest first. A clinic that has none waiting sees the section on its overview with one short line saying there is nothing waiting."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Once a handover has been accepted it is not undone. A case that needs to go back is a fresh handover, started by the clinic that now holds it, and it goes through exactly the same steps."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Every case that is still open on the day this ships can be handed over, whether it was started before or after, and whether it is a first-visit one or not. A case that has already been closed cannot be handed over at all."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Out of scope"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Anything about billing: which clinic is paid for a case that moved is being worked out separately and is not decided by this ticket. Any change to the questionnaire, to the images, or to what the patient can do. Handing a case to an individual doctor rather than to a clinic. Any notification outside the product - no email and no SMS to anybody."
+            }
+          ]
+        }
+      ]
+    },
+    "labels": [],
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "reporter": {
+      "accountId": "9d53e02bc6249f66aa1b82d9",
+      "displayName": "Sofia Brandt"
+    },
+    "created": "2026-08-22T09:05:00.000+0200",
+    "updated": "2026-08-23T11:20:00.000+0200",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

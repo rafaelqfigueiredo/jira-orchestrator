@@ -1,0 +1,31 @@
+{
+  "id": "51140",
+  "key": "RW-140",
+  "fields": {
+    "summary": "[App] Prefill the booking form from the last completed rental",
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "APPROVED [READY FOR RELEASE]",
+      "statusCategory": {
+        "key": "done",
+        "name": "Done"
+      }
+    },
+    "created": "2026-06-24T15:02:55.000+0100",
+    "updated": "2026-08-15T08:26:13.000+0100",
+    "labels": [],
+    "reporter": {
+      "accountId": "620031:00000000-0000-4000-8000-000000000102",
+      "displayName": "Tobias Renner"
+    },
+    "description": "When a customer starts a new booking we already know most of what they are going to type, because they told us on their last completed rental. We should prefill the form from it.\n\nEverything that is reusable should be carried over: the collection point they collected from last time, the add-ons they added, the insurance option they chose and the delivery slot they picked. Anything that is conditional on the specific item - the period, the quantity - should stay empty.\n\nWe should be able to switch this off for a customer segment, because for one-off hires the prefill is more confusing than helpful.\n\nThe prefilled values have to be editable, and it must be obvious to the customer that we filled them in rather than that they are locked.",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

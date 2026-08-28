@@ -1,0 +1,21 @@
+{
+  "verdict": "duplicate",
+  "confidence": "high",
+  "one_line": "A doctor cannot open a paid-for follow-up because the unlock control stays disabled - the same defect ORC-101 already describes.",
+  "subsystems": ["subsystems/dashboard"],
+  "files": ["src/features/case/FollowUpDecision.vue"],
+  "locality_basis": "bundle",
+  "terms_resolved": [
+    {"term": "follow-up", "concept": "capabilities/follow-up-cases"},
+    {"term": "examination tab", "concept": "domain/glossary"},
+    {"term": "authorisation", "concept": "domain/glossary"},
+    {"term": "dashboard", "concept": "subsystems/dashboard"}
+  ],
+  "terms_unresolved": ["mobile app"],
+  "questions": [],
+  "duplicate_of": "ORC-101",
+  "split_into": [],
+  "acceptance_criteria": [],
+  "not_verified": "Whether the mobile app shows the same defect: this reporter did not try it and ORC-101 explicitly excludes it, so it is untested on both tickets.",
+  "notes": "Same defect as ORC-101, described from the clinic's side rather than the developer's: greyed-out control on the examination tab, tooltip about a pending authorisation, patient has already paid. Worth carrying one detail across before closing - this one came from a customer-facing call, which ORC-101 does not record."
+}

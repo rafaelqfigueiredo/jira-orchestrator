@@ -1,0 +1,157 @@
+{
+  "isLast": true,
+  "issues": [
+    {
+      "id": "1102",
+      "key": "ORC-102",
+      "fields": {
+        "summary": "Case list is broken",
+        "labels": [
+          "needs-refinement"
+        ],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-13T16:20:00.000+0200"
+      }
+    },
+    {
+      "id": "1101",
+      "key": "ORC-101",
+      "fields": {
+        "summary": "Follow-up unlock stays disabled after the authorisation is claimed (dashboard, doctor role)",
+        "labels": [
+          "agent-ready"
+        ],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-14T09:12:00.000+0200"
+      }
+    },
+    {
+      "id": "1104",
+      "key": "ORC-104",
+      "fields": {
+        "summary": "Doctor cannot start a follow-up the patient has already paid for",
+        "labels": [
+          "possible-duplicate"
+        ],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-15T09:02:00.000+0200"
+      }
+    },
+    {
+      "id": "1103",
+      "key": "ORC-103",
+      "fields": {
+        "summary": "Make follow-ups clearer for patients",
+        "labels": [
+          "needs-refinement"
+        ],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-15T14:48:00.000+0200"
+      }
+    },
+    {
+      "id": "1105",
+      "key": "ORC-105",
+      "fields": {
+        "summary": "Follow-up improvements",
+        "labels": [],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-16T10:15:00.000+0200"
+      }
+    },
+    {
+      "id": "1106",
+      "key": "ORC-106",
+      "fields": {
+        "summary": "Offer the second-opinion request from the case screen",
+        "labels": [],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-18T08:05:00.000+0200"
+      }
+    },
+    {
+      "id": "1107",
+      "key": "ORC-107",
+      "fields": {
+        "summary": "Introduce recall cases, opened by the doctor after treatment",
+        "labels": [],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-20T14:41:00.000+0200"
+      }
+    },
+    {
+      "id": "1108",
+      "key": "ORC-108",
+      "fields": {
+        "summary": "Cap second-opinion requests at three a month",
+        "labels": [],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-22T16:12:00.000+0200"
+      }
+    },
+    {
+      "id": "1109",
+      "key": "ORC-109",
+      "fields": {
+        "summary": "Hand a case over to another clinic",
+        "labels": [],
+        "status": {
+          "name": "To Do",
+          "statusCategory": {
+            "key": "new",
+            "name": "To Do"
+          }
+        },
+        "updated": "2026-08-23T11:20:00.000+0200"
+      }
+    }
+  ]
+}

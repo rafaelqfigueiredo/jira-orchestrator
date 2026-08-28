@@ -1,0 +1,28 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "Something about a case list regressed recently, but the ticket does not say which case list, for whom, or what it does wrong.",
+  "subsystems": [
+    "subsystems/dashboard"
+  ],
+  "files": [
+    "src/features/home/CaseList.vue",
+    "src/stores/case-scope.ts"
+  ],
+  "locality_basis": "bundle",
+  "terms_resolved": [
+    {"term": "case list", "concept": "domain/glossary"},
+    {"term": "doctors", "concept": "domain/glossary"}
+  ],
+  "terms_unresolved": [],
+  "questions": [
+    "Which case list is this: the doctor queue on the dashboard home screen, or the patient app grouped list? They share a name but they are two different screens.",
+    "What does a doctor see instead of what they expect - an empty list, the wrong cases, an error, or the wrong order?",
+    "Which role and clinic was the person using when they saw it, and roughly when did it start?"
+  ],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [],
+  "not_verified": "I could not read any of the product's code in this run, so the doctor-facing candidates come from what we have written down rather than from the code itself. If this turns out to be the patient app, none of them apply: nothing we have written down describes that screen at all.",
+  "notes": "Not reproducible as written, and \"case list\" names two unrelated screens - the doctor queue and the patient app list - so the first question decides everything else."
+}

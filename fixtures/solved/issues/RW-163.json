@@ -1,0 +1,31 @@
+{
+  "id": "51163",
+  "key": "RW-163",
+  "fields": {
+    "summary": "[API] Improve the push integration, sync push reachability to the CRM",
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "IN PROGRESS",
+      "statusCategory": {
+        "key": "indeterminate",
+        "name": "In Progress"
+      }
+    },
+    "created": "2026-07-28T10:47:19.000+0100",
+    "updated": "2026-08-19T17:22:44.000+0100",
+    "labels": [],
+    "reporter": {
+      "accountId": "620031:00000000-0000-4000-8000-000000000104",
+      "displayName": "Sven Ostermann"
+    },
+    "description": "Our push delivery is unreliable and we cannot tell who we can actually reach. Two parts.\n\nPart A - clean up how we store a device token. We keep stale ones forever, we sometimes hold several for one customer, and nothing removes a token the provider has told us is dead.\n\nPart B - sync push reachability to the CRM as a contact attribute, so that marketing automation can fall back to email for customers we cannot reach by push. Today a campaign goes out assuming push works and we find out afterwards that it did not.\n\nPart A landed already:\n\n|| what || where ||\n| token cleanup on provider rejection | done |\n| one token per device | done |\n| stale token expiry job | done |\n\nPart B is still open.",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

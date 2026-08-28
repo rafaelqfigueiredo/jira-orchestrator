@@ -1,0 +1,9 @@
+{
+  "key": "ORC-101",
+  "verdict": "ready",
+  "max_questions": 0,
+  "expect_files": ["src/features/case/FollowUpDecision.vue"],
+  "duplicate_of": null,
+  "expect_split": false,
+  "why": "One outcome, reproducible, and the surface is decided. The reporter checked the API response before filing, so the fix is in the dashboard's follow-up decision panel and nothing needs asking. If a refiner cannot call this ready, its bar is too high to be useful."
+}

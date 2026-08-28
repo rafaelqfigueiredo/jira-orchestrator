@@ -1,0 +1,25 @@
+{
+  "verdict": "needs_input",
+  "confidence": "medium",
+  "one_line": "Patients do not understand what a follow-up is or when they are charged for it, and the ticket wants that improved without saying what improved would look like.",
+  "subsystems": [
+    "subsystems/dashboard"
+  ],
+  "files": [],
+  "locality_basis": "none",
+  "terms_resolved": [
+    {"term": "follow-up", "concept": "capabilities/follow-up-cases"},
+    {"term": "Recheck", "concept": "domain/glossary"}
+  ],
+  "terms_unresolved": ["explainer screen", "support contacts", "the original doctor"],
+  "questions": [
+    "Which surface is in scope: the patient app, the physician dashboard, or both? The confusion the ticket describes is in the patient app.",
+    "Is this a copy change or a flow change? A wording pass and an explainer screen before payment are different tickets with different reviewers.",
+    "What would make this done - is there a measure, such as the support contact rate on follow-up pricing, or is a design review the acceptance criterion?"
+  ],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [],
+  "not_verified": "Nothing we have written down describes the patient app, and I could not read its code in this run, so nothing here is pointed at code. The fourteen support contacts were not read.",
+  "notes": "The context is good and the problem is real, but the ticket asks for a judgment rather than a change: it offers copy, flow and an explainer screen as alternatives and leaves the choice open. That decision belongs to a person before an agent starts. Deliberately not pointed at any code - guessing at a screen nothing we have written down describes would be a guess dressed as an answer."
+}

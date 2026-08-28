@@ -1,0 +1,107 @@
+{
+  "id": "1104",
+  "key": "ORC-104",
+  "fields": {
+    "summary": "Doctor cannot start a follow-up the patient has already paid for",
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Reported by the clinic in the Tuesday call. A patient pays for a follow-up, the payment goes through, and the doctor still cannot start it: the button on the examination tab is greyed out and hovering it says something about waiting for an authorisation, even though the patient has paid."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Happens in the dashboard. I have not tried the mobile app."
+            }
+          ]
+        }
+      ]
+    },
+    "labels": [
+      "possible-duplicate"
+    ],
+    "issuetype": {
+      "name": "Bug"
+    },
+    "status": {
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "reporter": {
+      "accountId": "8c42df1ab5138e55ff0a71c8",
+      "displayName": "Jonas Keller"
+    },
+    "created": "2026-08-15T09:02:00.000+0200",
+    "updated": "2026-08-15T09:02:00.000+0200",
+    "comment": {
+      "comments": [
+        {
+          "id": "10001",
+          "created": "2026-08-15T09:02:00.000+0200",
+          "updated": "2026-08-15T09:02:00.000+0200",
+          "author": {
+            "accountId": "orc-service-account",
+            "displayName": "Orchestrator"
+          },
+          "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 3
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Refinement: duplicate"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Recorded by an earlier run of the orchestrator against ORC-104."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "orchestrator/refinement prompt=refine-seed0001 ticket-rev=daa9d0954804",
+                    "marks": [
+                      {
+                        "type": "em"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "total": 1,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

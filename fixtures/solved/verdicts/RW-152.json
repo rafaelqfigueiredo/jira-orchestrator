@@ -1,0 +1,75 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "Customers still on app versions 2.31.0 to 2.58.0 should receive a notification in the app's notification centre asking them to update, with versions below 2.31.0 dropped at the next regular release and versions below 2.58.0 dropped ten sprints later.",
+  "subsystems": [
+    "subsystems/api",
+    "subsystems/mobile"
+  ],
+  "files": [
+    "api/app/controllers/concerns/app_version_tracker.rb",
+    "api/app/services/app_versions/notify_outdated_version.rb",
+    "api/app/workers/app_versions/notify_outdated_version_worker.rb",
+    "api/app/services/app_versions/evaluate_update.rb",
+    "api/app/services/notifications/dispatcher.rb",
+    "api/config/locales/de.yml",
+    "api/config/locales/en.yml",
+    "mobile/src/pages/Notifications.vue",
+    "mobile/src/composables/useNotifications.js",
+    "mobile/src/components/Notifications/Notification.vue"
+  ],
+  "locality_basis": "both",
+  "terms_resolved": [
+    {
+      "term": "notification center",
+      "concept": "subsystems/mobile"
+    },
+    {
+      "term": "notification",
+      "concept": "subsystems/api"
+    }
+  ],
+  "terms_unresolved": [
+    "app version",
+    "activity",
+    "deprecated",
+    "sprint release"
+  ],
+  "questions": [
+    "What should count as a new activity that triggers this reminder - simply opening the app, or something the customer starts, such as a new booking?",
+    "Should a customer see this reminder only once, or again each time they do something new while still on an old version?",
+    "Customers also read the app in other languages - should they get this reminder too, and who supplies the wording for them?"
+  ],
+  "duplicate_of": null,
+  "split_into": [
+    {
+      "title": "Deprecate app versions below 2.31.0",
+      "description": "Stop supporting app versions below 2.31.0 with the next regular release."
+    },
+    {
+      "title": "Show an update reminder to customers on older versions",
+      "description": "Show the update reminder in the notification centre to customers on versions 2.31.0 up to 2.58.0 when a new activity is registered."
+    },
+    {
+      "title": "Deprecate app versions below 2.58.0 on a set date",
+      "description": "Stop supporting app versions below 2.58.0 on a named date, once the reminder has been running long enough."
+    }
+  ],
+  "acceptance_criteria": [
+    "All versions below 2.31.0 are deprecated with the next regular sprint release.",
+    "All versions between 2.31.0 and 2.58.0 receive a notification in the notification center to update the app once a new activity is registered.",
+    "The notification runs for the next 10 sprints, after which all versions below 2.58.0 are deprecated.",
+    "Title: \"An important note for you!\"",
+    "Body: \"We noticed that you are using an out-of-date version of the app. Please update it so that every relevant feature keeps working!\""
+  ],
+  "not_verified": "I could not see what a customer on one of the oldest app versions actually sees on a real phone, so I cannot say whether a message placed in the notification centre would reach them at all. Nothing we have written down says how long an app version stays supported, or what we count as a new activity, so both of those are answers only the team can give. We have this wording in one language only and I could not find it in the others, so I cannot tell whether customers reading the app in another language are meant to be included.",
+  "notes": "The ticket asks for three separate things: dropping support for the oldest versions now, showing the update reminder to the middle band, and dropping support for the rest after ten sprints. They land at different times and each could succeed or fail on its own, so they are better tracked as three, and the last one needs a real date rather than a count of sprints. The reminder itself reads clearly and the wording is already given, so it only needs the trigger settled - what counts as a new activity, and whether the message repeats.",
+  "key": "RW-152",
+  "reasoned_against": [
+    "ORC nothing configured to search",
+    "api staging@4c1e90a7b3d2",
+    "mobile main@2d7b44ff91ac"
+  ],
+  "terms_off_ticket": [],
+  "terms_contradiction": null
+}

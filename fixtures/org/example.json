@@ -1,0 +1,62 @@
+[
+  {
+    "name": "api",
+    "description": "Rails application: cases, follow-ups, authorisations, CRM sync",
+    "url": "https://github.com/example/api",
+    "sshUrl": "git@github.com:example/api.git",
+    "defaultBranchRef": { "name": "staging" },
+    "primaryLanguage": { "name": "Ruby" },
+    "pushedAt": "2026-08-18T16:40:00Z",
+    "isArchived": false
+  },
+  {
+    "name": "dashboard",
+    "description": "Doctor-facing web application",
+    "url": "https://github.com/example/dashboard",
+    "sshUrl": "git@github.com:example/dashboard.git",
+    "defaultBranchRef": { "name": "staging" },
+    "primaryLanguage": { "name": "TypeScript" },
+    "pushedAt": "2026-08-17T09:12:00Z",
+    "isArchived": false
+  },
+  {
+    "name": "mobile",
+    "description": "Patient mobile application",
+    "url": "https://github.com/example/mobile",
+    "sshUrl": "git@github.com:example/mobile.git",
+    "defaultBranchRef": { "name": "main" },
+    "primaryLanguage": { "name": "Dart" },
+    "pushedAt": "2026-08-11T11:02:00Z",
+    "isArchived": false
+  },
+  {
+    "name": "infra",
+    "description": "Terraform and deployment",
+    "url": "https://github.com/example/infra",
+    "sshUrl": "git@github.com:example/infra.git",
+    "defaultBranchRef": { "name": "trunk" },
+    "primaryLanguage": { "name": "HCL" },
+    "pushedAt": "2026-06-02T08:00:00Z",
+    "isArchived": false
+  },
+  {
+    "name": "legacy-portal",
+    "description": "Retired doctor portal, kept for reference",
+    "url": "https://github.com/example/legacy-portal",
+    "sshUrl": "git@github.com:example/legacy-portal.git",
+    "defaultBranchRef": { "name": "master" },
+    "primaryLanguage": { "name": "PHP" },
+    "pushedAt": "2024-03-04T10:00:00Z",
+    "isArchived": true
+  },
+  {
+    "name": "spike-notifications",
+    "description": "Empty repository, never pushed to",
+    "url": "https://github.com/example/spike-notifications",
+    "sshUrl": "git@github.com:example/spike-notifications.git",
+    "defaultBranchRef": null,
+    "primaryLanguage": null,
+    "pushedAt": "2026-08-01T00:00:00Z",
+    "isArchived": false
+  }
+]

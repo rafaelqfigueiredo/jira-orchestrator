@@ -1,0 +1,90 @@
+{
+  "verdict": "needs_input",
+  "confidence": "medium",
+  "one_line": "After a rental ends, offer a returning customer the same item again for a further period without re-entering their details, carry the previous handover record across, skip the deposit when the last rental ended without damage, and let the team see and switch off the offer per depot.",
+  "subsystems": [
+    "subsystems/api",
+    "subsystems/dashboard",
+    "subsystems/mobile"
+  ],
+  "files": [
+    "api/app/models/booking.rb",
+    "api/app/models/rental_period.rb",
+    "api/app/services/bookings/create_follow_up.rb",
+    "api/app/services/deposits/waive_for_follow_up.rb",
+    "api/app/services/handovers/attach_previous_record.rb",
+    "api/app/policies/follow_up_offer_policy.rb",
+    "api/config/locales/en.yml",
+    "api/db/migrate/20260602_add_follow_up_of_to_bookings.rb",
+    "dashboard/src/pages/Reactivation.vue",
+    "dashboard/src/components/Reactivation/FollowUpTable.vue",
+    "dashboard/src/api/reactivation.js",
+    "mobile/src/pages/BookingConfirmation.vue",
+    "mobile/src/components/Booking/FollowUpOffer.vue"
+  ],
+  "locality_basis": "both",
+  "terms_resolved": [
+    {
+      "term": "rental",
+      "concept": "subsystems/api"
+    },
+    {
+      "term": "depot",
+      "concept": "subsystems/dashboard"
+    },
+    {
+      "term": "item",
+      "concept": "subsystems/api"
+    }
+  ],
+  "terms_unresolved": [
+    "follow-on booking",
+    "returning customer",
+    "deposit",
+    "handover record",
+    "rental window",
+    "damage report"
+  ],
+  "questions": [
+    "How long after a rental ends should the follow-up offer still appear, and should it disappear once the item has been hired out to somebody else?",
+    "If the customer closes the app half way through accepting the offer, should the offer still be there when they come back, or has it been used up?",
+    "When the previous rental ended with damage recorded, should the offer be hidden entirely or shown with the deposit charged again?"
+  ],
+  "duplicate_of": null,
+  "split_into": [
+    {
+      "title": "Offer a returning customer the same item again",
+      "description": "Offer a returning customer the same item again for a further period, prefilled from the rental that just ended."
+    },
+    {
+      "title": "Carry the handover record into the follow-up booking",
+      "description": "Carry the previous handover record across to the new booking so the depot can see what condition the item was in."
+    },
+    {
+      "title": "Waive the deposit on a clean follow-up",
+      "description": "Waive the deposit on a follow-up booking when the previous rental ended with no damage recorded."
+    },
+    {
+      "title": "Report on follow-up bookings and let depots opt out",
+      "description": "Show the team which bookings came from a follow-up offer, and let them switch the offer off for one depot."
+    }
+  ],
+  "acceptance_criteria": [
+    "A returning customer who has completed a rental sees an offer to book the same item again without re-entering their details.",
+    "The handover record from the previous rental is attached to the new booking and visible to the depot handing the item over.",
+    "No deposit is taken on a follow-up booking when the previous rental ended with no damage recorded.",
+    "The team can see which bookings originated from a follow-up offer.",
+    "The offer can be switched off for a single depot without affecting the others."
+  ],
+  "not_verified": "I could not confirm what a returning customer sees today after a rental ends, so I cannot say whether this offer would appear somewhere they already look or somewhere new. Nothing we have written down says how long a returning customer stays a returning customer, and the deposit rules I could find do not say what happens when a rental ends with damage recorded but not yet priced, so both of those are answers only the team can give.",
+  "notes": "This is four deliverables rather than one: the offer itself, carrying the handover record across, waiving the deposit, and the reporting plus the per-depot switch. They can each ship and each fail on their own, and the deposit rule is the one with money attached, so it is worth tracking separately from the rest. The offer itself is described clearly enough to build once the expiry question is settled.",
+  "key": "RW-118",
+  "reasoned_against": [
+    "ORC nothing configured to search",
+    "api staging@4c1e90a7b3d2",
+    "dashboard staging@8fa2b61c05de",
+    "mobile main@2d7b44ff91ac"
+  ],
+  "terms_off_ticket": [],
+  "terms_contradiction": null
+}

@@ -1,0 +1,169 @@
+{
+  "id": "1107",
+  "key": "ORC-107",
+  "fields": {
+    "summary": "Introduce recall cases, opened by the doctor after treatment",
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Clinics have asked for a recall case: a case a doctor opens themselves once treatment is finished, to bring the patient back in for a check a few weeks later. Today they reopen the old case instead, which loses the original closure and makes the second consultation look like a correction of the first one."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "A recall case behaves like a first-visit case in every respect except two: the doctor opens it rather than the patient, and it carries the recall package rather than the standard one. The patient sees it in the app exactly the way they see a reopened case, and answers the same questionnaire."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Where"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The doctor opens a recall case from the case they are closing, on the dashboard. The patient app needs the new case on the case list and in the message thread, and nothing else there changes."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Acceptance criteria"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A doctor closing a case can open a recall case from it, and the closed case keeps its own closure."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "The patient sees the recall case in the app, with the same questionnaire a first-visit case has."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A recall case cannot be opened twice from the same closed case."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A doctor who is not a member of the clinic cannot open one."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Out of scope"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Pricing of the recall package, and anything about reminders or scheduling."
+            }
+          ]
+        }
+      ]
+    },
+    "labels": [],
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "reporter": {
+      "accountId": "9d53e02bc6249f66aa1b82d9",
+      "displayName": "Sofia Brandt"
+    },
+    "created": "2026-08-19T09:12:00.000+0200",
+    "updated": "2026-08-20T14:41:00.000+0200",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

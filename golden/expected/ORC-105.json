@@ -1,0 +1,9 @@
+{
+  "key": "ORC-105",
+  "verdict": "needs_input",
+  "max_questions": 3,
+  "expect_files": [],
+  "duplicate_of": null,
+  "expect_split": true,
+  "why": "Every one of the four items is clear on its own, which is exactly why a naive refiner marks it ready. It is still four changes across two subsystems, ranging from a string rename to a backfill over legacy rows, and it cannot be finished, reviewed or reverted as a unit. I expect needs_input with the split proposed, not a list of questions about the items."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "51118",
+  "key": "RW-118",
+  "fields": {
+    "summary": "[Dashboard / App] Reactivation - introduce follow-on bookings",
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "TESTING [IN STAGING]",
+      "statusCategory": {
+        "key": "indeterminate",
+        "name": "In Progress"
+      }
+    },
+    "created": "2026-06-02T09:14:22.000+0100",
+    "updated": "2026-08-18T11:41:07.000+0100",
+    "labels": [
+      "Reactivation"
+    ],
+    "reporter": {
+      "accountId": "620031:00000000-0000-4000-8000-000000000101",
+      "displayName": "Nadine Brauer"
+    },
+    "description": "We want to be able to offer a returning customer a follow-on booking once a rental has been completed. The customer gets a note in their account saying they can book the same item again for a further rental window without entering their details a second time.\n\nThe deposit should not be taken a second time when the previous rental was completed with no damage report. The handover record from the previous rental should be attached to the follow-on booking, so the depot can see what condition the item was in.\n\nThe team should also be able to see in the dashboard which follow-on bookings came out of a reactivation, and to switch reactivation off per depot.",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

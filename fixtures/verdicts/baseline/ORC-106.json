@@ -1,0 +1,24 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "The second-opinion request should be offered from the case a doctor is already looking at, but the sentence saying which cases qualify can be read two ways.",
+  "subsystems": [
+    "subsystems/dashboard"
+  ],
+  "files": [],
+  "locality_basis": "none",
+  "terms_resolved": [],
+  "terms_unresolved": ["second opinion", "reopened case", "first-visit case"],
+  "questions": [
+    "Should the request show for every reopened case, for any case unlocked by hand, and for first-visit cases with one of those four lab results - or only for reopened cases that were also unlocked by hand?"
+  ],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [
+    "A doctor who is a member of the clinic sees the request on a case that qualifies, and not on one that does not.",
+    "Selecting the request opens the existing second-opinion form with the case already filled in.",
+    "Nothing changes for a doctor who is not a member of the clinic."
+  ],
+  "not_verified": "I could not read any of the product's code in this run, so I have not checked what the examination tab offers today.",
+  "notes": "Everything else in the ticket is decided. The one sentence about which cases qualify is the whole of what is blocking it, and the two readings offer this to different doctors."
+}

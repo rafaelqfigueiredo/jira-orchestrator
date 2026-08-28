@@ -1,0 +1,7 @@
+state/
+sandboxes/
+clones/
+config/.env
+*.log
+.okf-registry.json
+.claude/

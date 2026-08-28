@@ -1,0 +1,77 @@
+{
+  "isLast": true,
+  "issues": [
+    {
+      "id": "51118",
+      "key": "RW-118",
+      "fields": {
+        "summary": "[Dashboard / App] Reactivation - introduce follow-on bookings",
+        "status": {
+          "name": "TESTING [IN STAGING]",
+          "statusCategory": {
+            "key": "indeterminate",
+            "name": "In Progress"
+          }
+        },
+        "issuetype": {
+          "name": "Story"
+        },
+        "updated": "2026-08-18T11:41:07.000+0100"
+      }
+    },
+    {
+      "id": "51140",
+      "key": "RW-140",
+      "fields": {
+        "summary": "[App] Prefill the booking form from the last completed rental",
+        "status": {
+          "name": "APPROVED [READY FOR RELEASE]",
+          "statusCategory": {
+            "key": "done",
+            "name": "Done"
+          }
+        },
+        "issuetype": {
+          "name": "Story"
+        },
+        "updated": "2026-08-15T08:26:13.000+0100"
+      }
+    },
+    {
+      "id": "51152",
+      "key": "RW-152",
+      "fields": {
+        "summary": "[App] Notification app update",
+        "status": {
+          "name": "APPROVED [READY FOR RELEASE]",
+          "statusCategory": {
+            "key": "done",
+            "name": "Done"
+          }
+        },
+        "issuetype": {
+          "name": "Story"
+        },
+        "updated": "2026-08-17T13:05:40.000+0100"
+      }
+    },
+    {
+      "id": "51163",
+      "key": "RW-163",
+      "fields": {
+        "summary": "[API] Improve the push integration, sync push reachability to the CRM",
+        "status": {
+          "name": "IN PROGRESS",
+          "statusCategory": {
+            "key": "indeterminate",
+            "name": "In Progress"
+          }
+        },
+        "issuetype": {
+          "name": "Story"
+        },
+        "updated": "2026-08-19T17:22:44.000+0100"
+      }
+    }
+  ]
+}

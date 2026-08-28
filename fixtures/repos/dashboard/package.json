@@ -1,0 +1,7 @@
+{
+  "name": "clinic-dashboard",
+  "private": true,
+  "dependencies": {
+    "vue": "^3.4.0"
+  }
+}

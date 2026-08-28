@@ -1,0 +1,27 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "A doctor should be able to hand a case over to another clinic, which takes it on with everything already on it.",
+  "subsystems": [
+    "subsystems/dashboard"
+  ],
+  "files": [],
+  "locality_basis": "none",
+  "terms_resolved": [],
+  "terms_unresolved": ["handover"],
+  "questions": [
+    "If the receiving clinic never accepts a handover, what should happen to it and to the case it was started from?"
+  ],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [
+    "A doctor who is a member of the clinic holding a case can start a handover from it, naming a receiving clinic and a note.",
+    "A doctor who is a member of the receiving clinic can accept a waiting handover, and the case then belongs to that clinic.",
+    "After acceptance the sending clinic's doctors can read the case and cannot change it.",
+    "The patient sees one line in the message thread naming the clinic that now holds the case.",
+    "A doctor who is a member of neither clinic sees no handover control anywhere."
+  ],
+  "rewritten_description": null,
+  "not_verified": "I could not read any of the product's code in this run, so I have not checked what a clinic overview shows today.",
+  "notes": "Everything the ticket sets out to decide, it decides. What it never touches is the handover that is waiting and stays waiting."
+}

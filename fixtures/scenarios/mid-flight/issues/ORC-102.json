@@ -1,0 +1,270 @@
+{
+  "id": "1102",
+  "key": "ORC-102",
+  "fields": {
+    "summary": "Case list is broken",
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The case list is broken since yesterday, doctors are complaining. Please fix asap."
+            }
+          ]
+        }
+      ]
+    },
+    "labels": [
+      "needs-refinement"
+    ],
+    "issuetype": {
+      "name": "Bug"
+    },
+    "status": {
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "reporter": {
+      "accountId": "6a20bd9e93f16c33dd8e5fa6",
+      "displayName": "Tomas Weber"
+    },
+    "created": "2026-08-13T16:20:00.000+0200",
+    "updated": "2026-08-13T16:20:00.000+0200",
+    "comment": {
+      "comments": [
+        {
+          "id": "10001",
+          "created": "2026-08-13T16:20:00.000+0200",
+          "updated": "2026-08-13T16:20:00.000+0200",
+          "author": {
+            "accountId": "orc-service-account",
+            "displayName": "Orchestrator"
+          },
+          "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 3
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Refinement: needs input"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Recorded by an earlier run of the orchestrator against ORC-102."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Answering these in the description is enough to unblock it:"
+                  }
+                ]
+              },
+              {
+                "type": "orderedList",
+                "attrs": {
+                  "order": 1
+                },
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Which case list do you mean: the one a doctor opens, or the one the support team works from?"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "What does broken look like on the screen: nothing at all, an error, or the wrong cases?"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Since when, and did anything change on your side that day?"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "orchestrator/refinement prompt=refine-seed0001 ticket-rev=96ca1ba080c0",
+                    "marks": [
+                      {
+                        "type": "em"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "10101",
+          "created": "2026-08-14T09:12:00.000+0200",
+          "updated": "2026-08-14T09:12:00.000+0200",
+          "author": {
+            "accountId": "6a20bd9e93f16c33dd8e5fa6",
+            "displayName": "Tomas Weber"
+          },
+          "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+              {
+                "type": "orderedList",
+                "attrs": {
+                  "order": 1
+                },
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "The one a doctor opens after logging in."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "It shows the spinner and then nothing, no error message anywhere."
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Since Tuesday morning. We did not change anything on our side that I know of."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "10102",
+          "created": "2026-08-14T11:40:00.000+0200",
+          "updated": "2026-08-14T11:40:00.000+0200",
+          "author": {
+            "accountId": "51c9a7de44b0f1298ab3e2d5",
+            "displayName": "Alina Roth"
+          },
+          "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Zu 1: I think Tomas means the support queue, not the doctor one. The doctors have not reported anything today."
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "10103",
+          "created": "2026-08-14T11:55:00.000+0200",
+          "updated": "2026-08-14T11:55:00.000+0200",
+          "author": {
+            "accountId": "51c9a7de44b0f1298ab3e2d5",
+            "displayName": "Alina Roth"
+          },
+          "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Adding that we had two clinics on the phone about this yesterday afternoon as well."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "total": 4,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

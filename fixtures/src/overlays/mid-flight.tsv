@@ -1,0 +1,4 @@
+ORC-101	agent-ready	ready	
+ORC-102	needs-refinement	needs input	Which case list do you mean: the one a doctor opens, or the one the support team works from?|What does broken look like on the screen: nothing at all, an error, or the wrong cases?|Since when, and did anything change on your side that day?
+ORC-103	needs-refinement	needs input	Is this one piece of work, or a copy change and a flow change that could ship separately?
+ORC-104	possible-duplicate	duplicate	

@@ -1,0 +1,180 @@
+{
+  "id": "1103",
+  "key": "ORC-103",
+  "fields": {
+    "summary": "Make follow-ups clearer for patients",
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "We keep getting support contacts from patients who do not understand what a follow-up is or whether they are about to be charged for one. Support handled fourteen of these last month and most of them end with an agent explaining the same two things: that a follow-up is a new paid consultation on a case that was already closed, and that the payment happens before a doctor looks at it."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "There is a general feeling that the flow does not explain itself. Some of the confusion may be the wording, which still says \"Recheck\" in a couple of places, and some of it may be that the price appears late in the flow. It could also be that patients expect the original doctor and we do not promise that anywhere."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "It would be good to look at this properly and make the whole thing clearer. Maybe a copy pass is enough, or maybe the flow itself needs to change, or maybe we need a short explainer screen before the payment step. Let's see what looks best once someone digs into it."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Design has not looked at this yet. Whoever picks it up should probably talk to support first and see the actual contacts."
+            }
+          ]
+        }
+      ]
+    },
+    "labels": [
+      "needs-refinement"
+    ],
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "reporter": {
+      "accountId": "7b31ce0fa4027d44ee9f60b7",
+      "displayName": "Marie Dubois"
+    },
+    "created": "2026-08-10T11:05:00.000+0200",
+    "updated": "2026-08-15T14:48:00.000+0200",
+    "comment": {
+      "comments": [
+        {
+          "id": "10001",
+          "created": "2026-08-15T14:48:00.000+0200",
+          "updated": "2026-08-15T14:48:00.000+0200",
+          "author": {
+            "accountId": "orc-service-account",
+            "displayName": "Orchestrator"
+          },
+          "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+              {
+                "type": "heading",
+                "attrs": {
+                  "level": 3
+                },
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Refinement: needs input"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Recorded by an earlier run of the orchestrator against ORC-103."
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Answering these in the description is enough to unblock it:"
+                  }
+                ]
+              },
+              {
+                "type": "orderedList",
+                "attrs": {
+                  "order": 1
+                },
+                "content": [
+                  {
+                    "type": "listItem",
+                    "content": [
+                      {
+                        "type": "paragraph",
+                        "content": [
+                          {
+                            "type": "text",
+                            "text": "Is this one piece of work, or a copy change and a flow change that could ship separately?"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "orchestrator/refinement prompt=refine-seed0001 ticket-rev=b8b3d5a5083f",
+                    "marks": [
+                      {
+                        "type": "em"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "10104",
+          "created": "2026-08-16T08:30:00.000+0200",
+          "updated": "2026-08-16T08:30:00.000+0200",
+          "author": {
+            "accountId": "7b31ce0fa4027d44ee9f60b7",
+            "displayName": "Marie Dubois"
+          },
+          "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Treat it as one piece of work for now. Support wants the wording fixed and the price shown earlier in the same release, and splitting it would mean two rounds of the same conversation with them."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "total": 2,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "id": "1106",
+  "key": "ORC-106",
+  "fields": {
+    "summary": "Offer the second-opinion request from the case screen",
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Doctors keep asking for a way to request a second opinion without leaving the case. The request itself already exists in the clinic admin area and nothing about that form changes - this ticket is only about offering it from the case a doctor is already looking at."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Show the request only for reopened cases, unlocked manually or first-visit cases with a lab result = Histology, Culture, PCR or Allergy panel."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Where"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The dashboard, on the examination tab, beside the existing follow-up control. The patient app is out of scope."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Acceptance criteria"
+            }
+          ]
+        },
+        {
+          "type": "bulletList",
+          "content": [
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "A doctor who is a member of the clinic sees the request on a case that qualifies, and does not see it on a case that does not."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Selecting the request opens the existing second-opinion form with the case already filled in."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Nothing changes for a doctor who is not a member of the clinic, on any case."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "attrs": {
+            "level": 3
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Out of scope"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The second-opinion form itself, who the request is routed to, and anything about pricing."
+            }
+          ]
+        }
+      ]
+    },
+    "labels": [],
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "reporter": {
+      "accountId": "9d53e02bc6249f66aa1b82d9",
+      "displayName": "Sofia Brandt"
+    },
+    "created": "2026-08-17T10:24:00.000+0200",
+    "updated": "2026-08-18T08:05:00.000+0200",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

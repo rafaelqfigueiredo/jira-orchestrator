@@ -1,0 +1,9 @@
+{
+  "key": "ORC-106",
+  "verdict": "needs_input",
+  "max_questions": 2,
+  "expect_files": [],
+  "duplicate_of": null,
+  "expect_split": false,
+  "why": "The one ticket here whose blocking gap is grammar rather than missing information. It is otherwise complete - one outcome, the surface decided, the role named, three criteria stated, the form itself out of scope - and every route to ready runs through one sentence: 'only for reopened cases, unlocked manually or first-visit cases with a lab result = ...'. That reads two ways. Either three sets qualify - every reopened case, any case unlocked by hand, and first-visit cases with one of the four named results - or only reopened cases qualify and they must also have been unlocked by hand. The two offer the feature to different doctors on different cases, so a refiner that picks one reading silently builds the wrong audience and reads as confident while doing it. No word is in dispute, so nothing the vocabulary side of the question bar can flag will catch it, and no search settles it either, because the request does not exist on that screen yet. A verdict of ready here is the failure this fixture exists to catch. The budget of two is what the measurement set it at rather than a round number: under the prompt version before the scope-ambiguity bullet the refiner did notice the ambiguity on this ticket, in all three samples, but spent two questions circling it - one asking whether the lab result applies to every group, one asking whether unlocked manually is a group of its own - and a third on something the ticket had already decided. One question naming both readings is what clearing this fixture means; three probing at one grouping is the shape it is set against."
+}

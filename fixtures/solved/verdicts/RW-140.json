@@ -1,0 +1,63 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "When a customer starts a new booking, prefill the form from their last finished rental - collection point, extras, insurance choice and delivery slot - leave the item-specific fields empty, make the prefilled values editable and obviously ours, and allow it to be switched off for a group of customers.",
+  "subsystems": [
+    "subsystems/api",
+    "subsystems/mobile"
+  ],
+  "files": [
+    "api/app/services/bookings/prefill_from_last.rb",
+    "api/app/serializers/booking_prefill_serializer.rb",
+    "api/app/models/booking.rb",
+    "api/app/models/customer_group.rb",
+    "mobile/src/pages/BookingForm.vue",
+    "mobile/src/composables/useBookingPrefill.js",
+    "mobile/src/components/Booking/PrefilledField.vue"
+  ],
+  "locality_basis": "both",
+  "terms_resolved": [
+    {
+      "term": "booking",
+      "concept": "subsystems/api"
+    },
+    {
+      "term": "booking form",
+      "concept": "subsystems/mobile"
+    }
+  ],
+  "terms_unresolved": [
+    "completed rental",
+    "reusable",
+    "conditional",
+    "collection point",
+    "add-ons",
+    "insurance option",
+    "delivery slot",
+    "customer segment"
+  ],
+  "questions": [
+    "Which of the previous choices should still be carried over when the customer is booking a different kind of item than last time?",
+    "If the extras or the insurance choice from last time are no longer available for this item, should we drop them silently or tell the customer we dropped them?",
+    "What decides that a customer belongs to the group this is switched off for - something the team sets by hand, or something about how they have hired from us before?"
+  ],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [
+    "Starting a new booking prefills the collection point, extras, insurance choice and delivery slot from the customer's last finished rental.",
+    "The period and quantity are left empty rather than carried over.",
+    "Every prefilled value can be changed by the customer before the booking is placed.",
+    "The customer can see that the values were filled in for them rather than being fixed.",
+    "The prefill can be switched off for a defined group of customers."
+  ],
+  "not_verified": "I could not confirm which of these choices are still offered for every kind of item we hire out, so I cannot say whether carrying one across can leave the customer with something they cannot actually have. Nothing we have written down defines the group of customers this would be switched off for, and the ticket describes it by example rather than by rule.",
+  "notes": "This reads clearly and is close to buildable. The open part is not the prefill itself but what happens when last time's choice does not apply this time, which is a product decision rather than something I can look up. Worth deciding before this is built, because the answer changes what the customer sees on the form rather than only what happens behind it.",
+  "key": "RW-140",
+  "reasoned_against": [
+    "ORC nothing configured to search",
+    "api staging@4c1e90a7b3d2",
+    "mobile main@2d7b44ff91ac"
+  ],
+  "terms_off_ticket": [],
+  "terms_contradiction": null
+}

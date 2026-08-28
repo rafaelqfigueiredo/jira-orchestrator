@@ -1,0 +1,39 @@
+# A sample fleet, for reading. Nothing loads this file.
+#
+# It is what bin/orc-repos-discover.sh proposes, roughly, for a three-repository
+# product: an API, a dashboard and a customer app. The remotes are invented, so
+# copying this whole file over config/projects.yml gives you three repositories
+# that fail to clone. Copy the shape, not the values.
+#
+# The field reference is in config/projects.yml itself, which is the file these
+# entries would go into.
+#
+# What you almost certainly want instead:
+#
+#   bin/orc-repos-discover.sh --org your-org   # propose, with your real remotes
+#   bin/orc-onboard.sh --org your-org          # propose, select, write, clone, draft
+#
+# Discovery reads each remote's actual default branch, which is the field this
+# sample cannot get right for you and the one a wrong guess costs the most: a
+# clone on a branch nobody is shipping produces a refinement reasoned
+# confidently against code that will never ship.
+
+api:
+  remote: https://github.com/example/api.git
+  default_branch: staging
+  subsystem: subsystems/api
+  verify: local           # the suite takes about twelve minutes
+
+dashboard:
+  remote: https://github.com/example/dashboard.git
+  default_branch: staging
+  subsystem: subsystems/dashboard
+  verify: local           # browser verification needs a running app
+
+mobile:
+  remote: https://github.com/example/mobile.git
+  default_branch: main    # this one really is main, which is the point:
+                          # default_branch is per repository and never assumed
+  # no subsystem: the bundle has no concept for the customer app yet, and
+  # refinement saying so is the correct output rather than a guess.
+  verify: unit-only

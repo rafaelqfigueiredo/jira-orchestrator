@@ -1,0 +1,9 @@
+{
+  "key": "ORC-102",
+  "verdict": "needs_input",
+  "max_questions": 4,
+  "expect_files": ["src/features/home/CaseList.vue"],
+  "duplicate_of": null,
+  "expect_split": false,
+  "why": "No reproduction, no role, no statement of what broken means, and 'case list' names two unrelated screens. Four questions block this one: which list, what do you see, how do I get there, and whether it hits every doctor or only some - the last is the starting state a reproduction needs, and holding it back costs a second round-trip. A fifth would be padding. I still expect the dashboard candidates named, because the answer will not move where that code lives."
+}

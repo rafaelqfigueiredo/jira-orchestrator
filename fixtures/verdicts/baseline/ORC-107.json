@@ -1,0 +1,32 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "Doctors should be able to open a recall case after treatment, which is a new kind of case the reports do not know about yet.",
+  "subsystems": [
+    "subsystems/api",
+    "subsystems/dashboard"
+  ],
+  "files": [
+    "app/models/medical_case.rb",
+    "app/reports/case_statistics.rb",
+    "app/exports/monthly_case_export.rb",
+    "src/features/statistics/clinicOverview.ts"
+  ],
+  "locality_basis": "search",
+  "terms_resolved": [],
+  "terms_unresolved": ["recall case", "recall package"],
+  "questions": [
+    "Should recall cases be counted in the clinic's monthly figures and in its monthly export alongside first visits, reopened cases and second opinions - or should they be left out of both?"
+  ],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [
+    "A doctor closing a case can open a recall case from it, and the closed case keeps its own closure.",
+    "The patient sees the recall case in the app, with the same questionnaire a first-visit case has.",
+    "A recall case cannot be opened twice from the same closed case.",
+    "A doctor who is not a member of the clinic cannot open one."
+  ],
+  "rewritten_description": null,
+  "not_verified": "I have not checked what the patient app shows on its case list today.",
+  "notes": "Everything else in the ticket is decided. The figures a clinic sees are the one place a new kind of case has to be decided about before anybody builds it."
+}

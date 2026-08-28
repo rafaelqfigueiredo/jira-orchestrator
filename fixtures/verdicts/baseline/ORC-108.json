@@ -1,0 +1,27 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "Second-opinion requests should be capped at three a month, but the ticket does not say whether the three belong to each doctor or to the clinic between them.",
+  "subsystems": [
+    "subsystems/dashboard"
+  ],
+  "files": [],
+  "locality_basis": "none",
+  "terms_resolved": [],
+  "terms_unresolved": ["second opinion", "allowance"],
+  "questions": [
+    "Should each doctor at a clinic get three second opinions a month, or should the three be shared between everybody at the clinic?"
+  ],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [
+    "A doctor who is a member of the clinic can request a second opinion while there is allowance left.",
+    "A doctor who is a member of the clinic sees the request control disabled, with the reason and the reset date, once the allowance is used up.",
+    "A request submitted through the API while the allowance is used up is refused with the same reason the screen gives.",
+    "A cancelled request restores the allowance immediately; an answered one never does.",
+    "Nothing changes for a doctor who is not a member of the clinic."
+  ],
+  "rewritten_description": null,
+  "not_verified": "I could not read any of the product's code in this run, so I have not checked what the examination tab offers today.",
+  "notes": "Everything else in this ticket is settled. The sentence about who the three belong to is the whole of what is blocking it, and the criteria below it read the other way from the sentence above it."
+}

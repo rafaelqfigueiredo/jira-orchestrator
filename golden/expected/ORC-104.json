@@ -1,0 +1,9 @@
+{
+  "key": "ORC-104",
+  "verdict": "duplicate",
+  "max_questions": 0,
+  "expect_files": [],
+  "duplicate_of": "ORC-101",
+  "expect_split": false,
+  "why": "Same defect as ORC-101 in different words: greyed-out unlock, tooltip about a pending authorisation, patient has paid. Naming the ticket is the whole test. A verdict of duplicate without a key is not a verdict, and asking the reporter whether it duplicates something is asking a human to do the refiner's job."
+}

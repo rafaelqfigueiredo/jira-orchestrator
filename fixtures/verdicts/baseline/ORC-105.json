@@ -1,0 +1,64 @@
+{
+  "verdict": "needs_input",
+  "confidence": "high",
+  "one_line": "Four unrelated follow-up deliverables collected under one ticket: a copy rename, a CRM event, a case-list grouping fix, and a legacy data backfill.",
+  "subsystems": [
+    "subsystems/api",
+    "subsystems/dashboard"
+  ],
+  "files": [
+    "src/locales/de.json",
+    "app/services/crm/publish_event.rb",
+    "app/models/follow_up_authorisation.rb"
+  ],
+  "locality_basis": "bundle",
+  "terms_resolved": [
+    {
+      "term": "Recheck",
+      "concept": "domain/glossary"
+    },
+    {
+      "term": "CRM sync",
+      "concept": "domain/glossary"
+    },
+    {
+      "term": "case list",
+      "concept": "domain/glossary"
+    },
+    {
+      "term": "follow-up authorisation",
+      "concept": "domain/glossary"
+    }
+  ],
+  "terms_unresolved": [
+    "lifecycle campaigns",
+    "legacy cases",
+    "reporting"
+  ],
+  "questions": [
+    "Can this be split into the four tickets below, or is there a reason they have to ship together?",
+    "For the backfill: which cases should count as follow-ups in reporting - only the ones the patient was authorised for, or every case that has a parent case? Roughly 3,000 legacy cases are affected either way."
+  ],
+  "duplicate_of": null,
+  "split_into": [
+    {
+      "title": "Rename Recheck to Follow-up in product strings",
+      "description": "Rename Recheck to Follow-up across the patient app and the dashboard, in every language those strings are translated into."
+    },
+    {
+      "title": "Publish a CRM event on follow-up authorisation",
+      "description": "Publish a CRM event when a follow-up authorisation is claimed, alongside the existing case-closure event."
+    },
+    {
+      "title": "Group follow-ups under their parent case",
+      "description": "Group follow-ups under their parent case in the patient app case list."
+    },
+    {
+      "title": "Backfill authorisation rows for legacy cases",
+      "description": "Backfill authorisation rows for legacy parented cases so reporting stops counting them as follow-ups."
+    }
+  ],
+  "acceptance_criteria": [],
+  "not_verified": "I could not read the product's code in this run, so nothing here was confirmed against it. The volume and shape of the old rows was not inspected.",
+  "notes": "Every item is individually clear, which is what makes this tempting to mark ready. It is still four changes across two very different parts of the product with very different risk - a wording change next to a data fix over 3,002 rows - and one ticket cannot be finished, reviewed or reverted as a unit. Split it and the first three are close to ready on their own."
+}

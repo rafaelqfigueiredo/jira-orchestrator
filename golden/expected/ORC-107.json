@@ -1,0 +1,9 @@
+{
+  "key": "ORC-107",
+  "verdict": "needs_input",
+  "max_questions": 3,
+  "expect_files": [],
+  "duplicate_of": null,
+  "expect_split": false,
+  "why": "One outcome, a named surface, a role, four criteria the ticket states itself, and an explicit out-of-scope list: complete in every respect but one, so that the one is the only thing that can be blocking it. It introduces a new case type, and the fixture repositories enumerate case types in three places the ticket never names - the monthly case export, the case statistics and the clinic overview. Whether a recall case is counted where the existing kinds are counted is a product decision nobody has made, and it is a whole piece of work rather than a detail: the reports under-report from the day this ships. So needs_input, on that question alone. Deliberately no ambiguous word, no second deliverable and no missing reproduction, because this ticket exists to measure whether that one question gets asked and any other reason to return needs_input would let it pass without it."
+}

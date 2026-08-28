@@ -1,0 +1,68 @@
+# The mechanics of every repository the orchestrator may reason about.
+#
+# This file is source: in git, reviewed, and changed only by a human. It holds
+# mechanics and nothing else - where a repository is, which branch a ticket is
+# about, and how a change to it gets verified.
+#
+# What a subsystem *means* is not here. Which repository owns follow-ups, what
+# people call the customer app when they are not being precise, and which terms
+# carry a distinction all live in the knowledge bundle under .okf/, because that
+# is knowledge rather than configuration and it is read by the refiner, not by a
+# shell script. Refinement routes through the bundle first and this file second:
+# the ticket's words become a subsystem, and only then a path and a branch.
+#
+# The clones themselves are neither. They are derived state: disposable,
+# gitignored, rebuilt by bin/orc-repos-sync.sh, and never committed.
+#
+# Fields, all optional except where noted:
+#
+#   remote          clone URL. Set it and the orchestrator owns the clone: it
+#                   clones what is missing and fast-forwards what is behind.
+#                   Leave it out and the path is somebody else's checkout, which
+#                   is read as it is and reported as unmanaged.
+#   default_branch  REQUIRED when remote is set, and never assumed. "main" is
+#                   wrong in more repositories than people expect - plenty of fleets
+#                   release from staging, and often not uniformly - and a wrong
+#                   guess means a whole refinement reasoned against code nobody
+#                   is shipping.
+#   repo            where the clone lives. A relative path is under
+#                   ORC_CLONE_DIR (clones/ by default); omit it and the clone
+#                   lands in clones/<project>.
+#   subsystem       the concept in .okf/ this repository is the code for, if the
+#                   bundle describes it. The bundle owns the meaning; this field
+#                   is only the join, so refinement can go from a subsystem it
+#                   resolved to a path it can search without guessing that a
+#                   project key and a concept id happen to match.
+#   verify          local | unit-only. Section 5: a container stack is worth it
+#                   only where the suite is slow enough that an agent should
+#                   iterate before pushing. Read in phase 2; recorded now
+#                   because it is a per-repository fact a human decides.
+#
+# bin/orc-repos-discover.sh prints a ready-to-paste block for a whole GitHub
+# organisation, with default_branch taken from what each remote actually says.
+# It proposes only. Pasting is the consent step, and it is deliberately manual.
+
+# The orchestrator's own project. No remote, so the orchestrator does not manage
+# this clone: it reads whatever path is configured, or the one TARGET_REPO names,
+# and reports its condition rather than fast-forwarding it. This is the shape the
+# single-repository trial setup has, and it stays valid.
+ORC:
+  repo: "" # absolute path, or empty to localise from .okf alone
+  bundle: .okf
+  default_branch: main
+  verify: unit-only
+
+# The product's repositories go below. Nothing is here yet, because nothing
+# ships here: the remotes are yours.
+#
+#   bin/orc-repos-discover.sh --org your-org   # propose a block, with the real
+#                                             # default branch of each remote
+#   bin/orc-onboard.sh --org your-org          # propose, select, write, clone, draft
+#
+# Discovery proposes and never writes this file. Selection is the consent step.
+#
+# If you want to see the shape of a filled-in fleet before running anything,
+# examples/projects.yml holds a sample. It is a sample rather than a commented
+# block down here for a reason: this file is source that every installation
+# edits, so example lines in it are lines each installation has to delete, and
+# lines that conflict on a pull.

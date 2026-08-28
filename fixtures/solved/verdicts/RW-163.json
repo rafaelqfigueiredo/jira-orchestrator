@@ -1,0 +1,67 @@
+{
+  "verdict": "needs_input",
+  "confidence": "medium",
+  "one_line": "Clean up how a customer's push registration is stored so dead ones are removed and one device holds one, and then tell the marketing system which customers can actually be reached by push so a campaign can fall back to email.",
+  "subsystems": [
+    "subsystems/api"
+  ],
+  "files": [
+    "api/app/models/push_registration.rb",
+    "api/app/services/push/register_device.rb",
+    "api/app/services/push/prune_rejected.rb",
+    "api/app/workers/push/expire_stale_registrations_worker.rb",
+    "api/app/services/crm/sync_contact_attributes.rb",
+    "api/app/workers/crm/sync_reachability_worker.rb",
+    "api/config/initializers/push_provider.rb"
+  ],
+  "locality_basis": "both",
+  "terms_resolved": [
+    {
+      "term": "push",
+      "concept": "subsystems/api"
+    },
+    {
+      "term": "campaign",
+      "concept": "subsystems/api"
+    }
+  ],
+  "terms_unresolved": [
+    "push reachability",
+    "device token",
+    "contact attribute",
+    "marketing automation",
+    "CRM"
+  ],
+  "questions": [
+    "Should a customer count as unreachable as soon as one delivery fails, or only after we have failed to reach them several times?",
+    "When a customer turns notifications back on, how quickly does the marketing system need to know - immediately, or is the next daily sync soon enough?",
+    "If the sync to the marketing system is down, should a campaign hold and wait or go out using the last reachability we knew about?"
+  ],
+  "duplicate_of": null,
+  "split_into": [
+    {
+      "title": "Clean up rejected and duplicate push registrations",
+      "description": "Remove push registrations the provider has rejected, and keep one registration per device."
+    },
+    {
+      "title": "Share push reachability with the marketing system",
+      "description": "Tell the marketing system which customers can be reached by push, so a campaign can fall back to email when they cannot."
+    }
+  ],
+  "acceptance_criteria": [
+    "A push registration the provider rejects is removed rather than retried forever.",
+    "One device holds one push registration.",
+    "A registration that has gone unused past a defined age is expired.",
+    "Whether a customer can be reached by push is available to the marketing system as a property of that customer.",
+    "A campaign can use that property to send email instead of push."
+  ],
+  "not_verified": "The ticket says the first half has already landed, and I could not confirm that from what I was able to read - so it is worth checking before anybody starts, because the two halves have different owners. Nothing we have written down says how many failed deliveries mean a customer is unreachable, or how fresh the marketing system needs that answer to be, and both of those change what gets built rather than only how.",
+  "notes": "The two halves are better tracked separately: the first is cleanup with no visible effect on customers, the second changes what a campaign does and can be got wrong in a way people notice. The ticket says the first half is done, which if true makes this really only the second half - worth confirming with the team rather than assuming either way. The failure question matters most: treating one failed delivery as unreachable would quietly move customers to email who could have been reached.",
+  "key": "RW-163",
+  "reasoned_against": [
+    "ORC nothing configured to search",
+    "api staging@4c1e90a7b3d2"
+  ],
+  "terms_off_ticket": [],
+  "terms_contradiction": null
+}

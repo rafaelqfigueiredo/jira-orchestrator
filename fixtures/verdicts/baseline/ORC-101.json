@@ -1,0 +1,50 @@
+{
+  "verdict": "ready",
+  "confidence": "high",
+  "one_line": "The dashboard's follow-up decision panel keeps the unlock control disabled even though the API already reports the authorisation as claimed.",
+  "subsystems": [
+    "subsystems/dashboard"
+  ],
+  "files": [
+    "src/features/case/FollowUpDecision.vue",
+    "src/features/case/ExaminationTab.vue"
+  ],
+  "locality_basis": "bundle",
+  "terms_resolved": [
+    {
+      "term": "follow-up",
+      "concept": "capabilities/follow-up-cases"
+    },
+    {
+      "term": "authorisation",
+      "concept": "domain/glossary"
+    },
+    {
+      "term": "examination tab",
+      "concept": "domain/glossary"
+    },
+    {
+      "term": "clinic",
+      "concept": "domain/glossary"
+    },
+    {
+      "term": "dashboard",
+      "concept": "subsystems/dashboard"
+    }
+  ],
+  "terms_unresolved": [
+    "follow-up decision panel",
+    "unlock control"
+  ],
+  "questions": [],
+  "duplicate_of": null,
+  "split_into": [],
+  "acceptance_criteria": [
+    "A doctor on a case whose follow-up authorisation is claimed can open the follow-up from the examination tab.",
+    "A doctor on a case whose authorisation is not claimed still sees the control disabled with the existing tooltip.",
+    "The regression is covered by a test at the level where the bug lives."
+  ],
+  "rewritten_description": "A doctor cannot open a follow-up whose authorisation has already been claimed. On the examination tab of a closed case, the \"Open follow-up\" control in the follow-up decision panel stays disabled and its tooltip still reads \"waiting for authorisation\", so the case cannot be worked on at all.\n\nTo see it, open a closed case that has a claimed follow-up authorisation as a doctor who belongs to that case's clinic, go to the examination tab, and look at the \"Open follow-up\" control.\n\nThe control should be enabled, and activating it should open the follow-up for examination.\n\nThis happens on the dashboard only. The authorisation is already recorded as claimed; it is the dashboard that shows it wrongly.\n\nDone when:\n\n- A doctor on a case whose follow-up authorisation is claimed can open the follow-up from the examination tab.\n- A doctor on a case whose authorisation is not claimed still sees the control disabled with the existing tooltip.\n- The change is covered by a test at the level where the fault lies.\n\nFollow-up pricing and the mobile app's own follow-up wizard are out of scope.",
+  "not_verified": "No repository was available to search in this run, so the file names come from the knowledge bundle rather than from reading the component. Which field the panel reads instead of authorisation_claimed_at is unconfirmed.",
+  "notes": "One outcome, a reproduction that names the surface, the role and the starting state, and criteria that can be checked afterwards. The bundle agrees with the ticket that the decision is the API's and the dashboard only renders it, so the fix belongs in the decision panel."
+}

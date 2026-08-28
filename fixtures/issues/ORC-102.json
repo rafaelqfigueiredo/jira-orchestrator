@@ -1,0 +1,45 @@
+{
+  "id": "1102",
+  "key": "ORC-102",
+  "fields": {
+    "summary": "Case list is broken",
+    "description": {
+      "type": "doc",
+      "version": 1,
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "The case list is broken since yesterday, doctors are complaining. Please fix asap."
+            }
+          ]
+        }
+      ]
+    },
+    "labels": [],
+    "issuetype": {
+      "name": "Bug"
+    },
+    "status": {
+      "name": "To Do",
+      "statusCategory": {
+        "key": "new",
+        "name": "To Do"
+      }
+    },
+    "reporter": {
+      "accountId": "6a20bd9e93f16c33dd8e5fa6",
+      "displayName": "Tomas Weber"
+    },
+    "created": "2026-08-13T16:20:00.000+0200",
+    "updated": "2026-08-13T16:20:00.000+0200",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}

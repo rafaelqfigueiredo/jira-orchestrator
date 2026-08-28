@@ -1,0 +1,9 @@
+{
+  "key": "ORC-103",
+  "verdict": "needs_input",
+  "max_questions": 5,
+  "expect_files": [],
+  "duplicate_of": null,
+  "expect_split": false,
+  "why": "This is the one that separates a good refiner from a keyword matcher. It has more context than any other ticket here, and it is the least actionable: it offers copy, flow and an explainer screen as alternatives and never picks one, so there is no outcome anybody could verify. A refiner that reads volume of prose as readiness will call this ready. Up to five questions block it: which of the offered changes is wanted, whether the price may move earlier in the flow, whether the payment moment itself may move, whether the original doctor is promised, and what done looks like - each is a decision the ticket raises and never makes, and any of them deferred is a second round-trip. I expect no files named either - the confusion is in the patient app, which the bundle does not describe."
+}

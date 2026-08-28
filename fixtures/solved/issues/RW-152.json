@@ -1,0 +1,33 @@
+{
+  "id": "51152",
+  "key": "RW-152",
+  "fields": {
+    "summary": "[App] Notification app update",
+    "issuetype": {
+      "name": "Story"
+    },
+    "status": {
+      "name": "APPROVED [READY FOR RELEASE]",
+      "statusCategory": {
+        "key": "done",
+        "name": "Done"
+      }
+    },
+    "created": "2026-07-09T13:29:36.000+0100",
+    "updated": "2026-08-17T13:05:40.000+0100",
+    "labels": [
+      "Change_Notes_Done(green_dark)"
+    ],
+    "reporter": {
+      "accountId": "620031:00000000-0000-4000-8000-000000000103",
+      "displayName": "Laura Wendt"
+    },
+    "description": "All versions < 2.31.0 will be deprecated with the next regular sprint release. All versions between 2.31.0 and 2.58.0 have to get a notification in notification center to update the app once a new activity is registered. This has to be implemented for the next 10 sprints, after that all versions below 2.58. have to be deprecated. \n\n\n\nTitle: An important note for you!\n\nBody: We noticed that you are using an out-of-date version of the app. Please update it so that every relevant feature keeps working!",
+    "comment": {
+      "comments": [],
+      "total": 0,
+      "maxResults": 100,
+      "startAt": 0
+    }
+  }
+}
